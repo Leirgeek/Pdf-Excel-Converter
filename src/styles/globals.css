@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0891B2;
+  --secondary: #164E63;
+  --background: #0A1929;
+  --text: #E2E8F0;
+  --accent: #7DD3FC;
+  --hover: #0E7490;
+  --error: #EF4444;
+  --success: #10B981;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--background)] text-[var(--text)];
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2.5 rounded-lg
+    bg-[var(--primary)] text-[var(--text)] font-medium
+    hover:bg-[var(--hover)] 
+    transition-all duration-200
+    hover:shadow-lg transform hover:-translate-y-0.5
+    disabled:bg-[var(--secondary)]/50 disabled:cursor-not-allowed
+    disabled:transform-none disabled:shadow-none;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2.5 rounded-lg
+    bg-[var(--secondary)] text-[var(--text)] font-medium
+    hover:bg-[var(--hover)]
+    transition-all duration-200
+    hover:shadow-lg transform hover:-translate-y-0.5
+    disabled:bg-[var(--secondary)]/50 disabled:cursor-not-allowed
+    disabled:transform-none disabled:shadow-none;
+  }
+
+  .card {
+    @apply bg-[#0F2942] rounded-xl p-6 md:p-8 shadow-xl;
+  }
+
+  .dropzone {
+    @apply border-2 border-dashed rounded-xl p-8
+    transition-colors duration-200 ease-in-out
+    flex flex-col items-center justify-center
+    min-h-[200px] cursor-pointer;
+  }
+
+  .dropzone-active {
+    @apply border-[var(--accent)] bg-[var(--secondary)]/20;
+  }
+
+  .dropzone-inactive {
+    @apply border-[var(--text)]/20 
+    hover:border-[var(--accent)] 
+    hover:bg-[var(--secondary)]/10;
+  }
+
+  .file-item {
+    @apply bg-[#0F2942] rounded-lg p-4 
+    flex items-center justify-between
+    transition-all duration-200
+    hover:shadow-md;
+  }
+
+  .icon-button {
+    @apply p-1.5 rounded-md 
+    hover:bg-[var(--secondary)]/50 
+    text-[var(--text)]/60 
+    hover:text-[var(--text)] 
+    transition-colors;
+  }
+}

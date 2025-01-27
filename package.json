@@ -11,14 +11,21 @@
   "dependencies": {
     "@radix-ui/react-label": "^2.1.1",
     "@radix-ui/react-slot": "^1.1.1",
+    "@types/react-dropzone": "^5.1.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dotenv": "^16.4.7",
+    "llamaindex": "^0.8.31",
     "lucide-react": "^0.474.0",
     "next": "13.4.19",
+    "openai": "^4.80.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-dropzone": "^14.3.5",
     "replicate": "^0.25.2",
-    "tailwind-merge": "^2.6.0"
+    "tailwind-merge": "^2.6.0",
+    "xlsx": "^0.18.5",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@types/node": "^20",
